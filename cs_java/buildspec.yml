@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "INSTALL PHASE"
+
+  pre_build:
+    commands:
+      - echo "PRE-BUILD PHASE"
+
+  build:
+    commands:
+      - echo "BUILD PHASE"
+      -javac cs_java/src/cs_java/Wish.java
+      -java -cp cs_java/src cs_java.Wish
+
+  post_build:
+    commands:
+      - echo "POST-BUILD PHASE"
+
+artifacts:
+  files:
+    - '**/*'
