@@ -12,6 +12,8 @@ phases:
   build:
     commands:
       - echo "BUILD PHASE"
+      - sed -i 's/\r$//' scripts/*.sh
+      - chmod +x scripts/*.sh
       - javac cs_java/src/cs_java/Wish.java
       - java -cp cs_java/src cs_java.Wish
 
