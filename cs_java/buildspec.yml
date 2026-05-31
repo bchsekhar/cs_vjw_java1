@@ -12,8 +12,8 @@ phases:
   build:
     commands:
       - echo "BUILD PHASE"
-      -javac src/cs_java/Wish.java
-      -java -cp cs_java/src cs_java.Wish
+      - javac src/cs_java/Wish.java
+      - java -cp cs_java/src cs_java.Wish
 
   post_build:
     commands:
